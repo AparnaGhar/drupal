@@ -1,0 +1,23 @@
+<?php
+/**
+* Implements hook_theme() to add the template definition.
+**/
+
+function custom_date_theme($existing, $type, $theme, $path) {
+  return [
+    'location_date' => [
+        'variables' => [
+        'lat' => NULL,
+        'lag' => NULL,
+        'date' => NULL
+        ]
+      ]
+  ];
+}
+function custom_date_preprocess_page(&$variables) {
+    $loader = new \Twig_Loader_Filesystem(array('/var/www/html/pump/modules/custom_date/templates'));
+    $twig = new \Twig_Environment($loader, array('debug' => true));
+    /** @var \Twig\TemplateWrapper $template */
+    $template = $twig->load('location_date.html.twig');
+    $template->renderBlock('Custom Date Formatter', array('test' => 'test'));
+}

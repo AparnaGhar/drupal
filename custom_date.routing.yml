@@ -1,0 +1,7 @@
+manual_date.configuration:
+  path: '/admin/config/custom/date'
+  defaults:
+    _form: '\Drupal\custom_date\Form\DateConfiguration'
+    _title: 'Manual Date Configuration'
+  requirements:
+   _permission: 'access custom date configuration'

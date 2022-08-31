@@ -1,0 +1,3 @@
+services:
+  custom_date.custom_services:
+    class: Drupal\custom_date\CustomService

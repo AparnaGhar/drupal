@@ -1,0 +1,6 @@
+custom_date.config_form:
+  title: 'Manual Date Configuration'
+  route_name: manual_date.configuration
+  parent: system.admin_config_system
+  description: 'Manage manual Date config'
+  weight: 10
