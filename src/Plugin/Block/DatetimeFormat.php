@@ -40,7 +40,7 @@ class DatetimeFormat extends BlockBase {
   public function build() {
     $custom_date_obj = \Drupal::config('custom_date.common_settings');
     $custom_city_lsv = $custom_date_obj->get('City');
-    $GOOGLE_API_KEY_HERE = "AIzaSyBN2sYMbpjo7bvKR00v2e_aJ6mkwX2Xyaw";
+    $GOOGLE_API_KEY_HERE = "xyz";
 
     $data_location = "https://maps.google.com/maps/api/geocode/json?key=".$GOOGLE_API_KEY_HERE."&address=".str_replace(" ", "+", $custom_city_lsv)."&sensor=false";
     $data = file_get_contents($data_location);
